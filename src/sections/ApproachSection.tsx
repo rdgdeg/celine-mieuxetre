@@ -11,7 +11,6 @@ export default function ApproachSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal>
             <SectionHeader
-              animated
               label="Philosophie"
               title="Une approche naturelle et bienveillante"
               align="left"

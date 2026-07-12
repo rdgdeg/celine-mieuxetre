@@ -41,7 +41,6 @@ export default function ServicesIndex() {
         <div className="mx-auto max-w-[1200px] relative">
           <ScrollReveal blur={false} scale={1}>
             <SectionHeader
-              animated
               label="Mes méthodes"
               title="9 approches pour votre harmonie"
               subtitle="Humains et animaux — en cabinet ou à distance. Tarifs sur demande."

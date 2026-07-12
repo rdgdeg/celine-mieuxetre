@@ -41,7 +41,6 @@ export default function MethodsPreviewSection() {
       <div className="max-w-[1200px] mx-auto px-6 relative">
         <ScrollReveal blur={false} scale={1}>
           <SectionHeader
-            animated
             label="Mes méthodes"
             title="9 approches pour votre harmonie"
             subtitle="Tarifs sur demande — contactez-moi pour en discuter."

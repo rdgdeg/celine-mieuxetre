@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -40,51 +40,53 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
-        /** Marque — lavande douce + pastels nature */
+        /** Harmonie — terre, brique, pêche (distinct du vert psy) */
         brand: {
-          DEFAULT: "#7c6baa",
-          light: "#a898d4",
-          dark: "#4a3d6b",
+          DEFAULT: "#C4705A",
+          light: "#E8A090",
+          dark: "#5C3828",
         },
-        /** Accent frais complémentaire */
-        sky: {
-          DEFAULT: "#8fbcb4",
-          light: "#c5e8dc",
+        peach: {
+          DEFAULT: "#F0C4B0",
+          light: "#F8E8DE",
         },
-        mist: {
-          DEFAULT: "#e8e4f4",
-          soft: "#f4f2fa",
+        sage: {
+          DEFAULT: "#7A9072",
+          light: "#B8C9B0",
         },
-        /** Lavande secondaire */
-        lavender: {
-          DEFAULT: "#9b8ec4",
-          light: "#c4b8e0",
+        terracotta: {
+          DEFAULT: "#A85A42",
+          muted: "#D4A898",
         },
-        ink: "#2a2340",
+        ink: "#2C2419",
         cream: {
-          DEFAULT: "#faf9fc",
-          alt: "#f0edf8",
+          DEFAULT: "#FBF7F3",
+          alt: "#F3EBE3",
+          warm: "#EDE3D8",
         },
         warm: {
-          text: "#2a2340",
-          "text-secondary": "#524a6b",
-          "text-light": "#6e6585",
-          border: "#d4cce8",
+          text: "#3D3429",
+          "text-secondary": "#6B5E52",
+          "text-light": "#8A7B6E",
+          border: "#E0D4C8",
+        },
+        /** Alias legacy — pointe vers la nouvelle palette */
+        lavender: {
+          DEFAULT: "#7A9072",
+          light: "#B8C9B0",
+        },
+        sky: {
+          DEFAULT: "#7A9072",
+          light: "#D4E4CE",
+        },
+        mist: {
+          DEFAULT: "#F3EBE3",
+          soft: "#FBF7F3",
         },
       },
       fontFamily: {
-        display: ['"Fraunces"', "Georgia", "serif"],
-        sans: ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        display: ['"Cormorant Garamond"', "Georgia", "serif"],
+        sans: ['"DM Sans"', "system-ui", "sans-serif"],
       },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",
@@ -94,16 +96,16 @@ module.exports = {
         xs: "calc(var(--radius) - 6px)",
       },
       boxShadow: {
-        xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-        card: "0 6px 28px rgba(13, 74, 50, 0.07)",
-        "card-hover": "0 14px 40px rgba(13, 74, 50, 0.12)",
-        nav: "0 2px 20px rgba(13, 74, 50, 0.08)",
-        blog: "0 8px 32px rgba(13, 74, 50, 0.08)",
-        "blog-hover": "0 16px 48px rgba(13, 74, 50, 0.14)",
-        cta: "0 4px 22px rgba(22, 199, 122, 0.38)",
-        "hero-frame": "0 28px 60px -12px rgba(13, 74, 50, 0.28)",
-        banner: "0 12px 40px rgba(13, 74, 50, 0.2)",
-        animal: "0 4px 18px rgba(13, 74, 50, 0.06)",
+        xs: "0 1px 2px 0 rgb(44 36 25 / 0.05)",
+        card: "0 8px 30px rgba(92, 56, 40, 0.08)",
+        "card-hover": "0 16px 44px rgba(92, 56, 40, 0.12)",
+        nav: "0 2px 24px rgba(92, 56, 40, 0.07)",
+        blog: "0 8px 32px rgba(92, 56, 40, 0.07)",
+        "blog-hover": "0 16px 48px rgba(92, 56, 40, 0.11)",
+        cta: "0 6px 24px rgba(196, 112, 90, 0.35)",
+        "hero-frame": "0 24px 56px -8px rgba(92, 56, 40, 0.22)",
+        banner: "0 12px 40px rgba(92, 56, 40, 0.15)",
+        animal: "0 4px 20px rgba(92, 56, 40, 0.06)",
       },
       keyframes: {
         "accordion-down": {
@@ -114,44 +116,17 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "caret-blink": {
-          "0%,70%,100%": { opacity: "1" },
-          "20%,50%": { opacity: "0" },
-        },
-        "hero-blob": {
-          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
-          "50%": { transform: "translate(18px, -14px) scale(1.06)" },
-        },
-        "hero-fade": {
-          "0%": { opacity: "0.4" },
-          "50%": { opacity: "0.75" },
-          "100%": { opacity: "0.4" },
-        },
-        "hero-line": {
-          "0%": { transform: "scaleX(0)", opacity: "0.6" },
-          "100%": { transform: "scaleX(1)", opacity: "1" },
-        },
-        shimmer: {
-          "0%": { backgroundPosition: "200% center" },
-          "100%": { backgroundPosition: "-200% center" },
-        },
-        "soft-pulse": {
-          "0%, 100%": { opacity: "0.5", transform: "scale(1)" },
-          "50%": { opacity: "0.85", transform: "scale(1.05)" },
+        "soft-float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "caret-blink": "caret-blink 1.25s ease-out infinite",
-        "hero-blob": "hero-blob 14s ease-in-out infinite",
-        "hero-blob-slow": "hero-blob 22s ease-in-out infinite reverse",
-        "hero-fade": "hero-fade 8s ease-in-out infinite",
-        "hero-line": "hero-line 1.2s ease-out forwards",
-        shimmer: "shimmer 4s linear infinite",
-        "soft-pulse": "soft-pulse 6s ease-in-out infinite",
+        "soft-float": "soft-float 6s ease-in-out infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

@@ -6,40 +6,47 @@ import { SITE } from "@/data/site";
 
 export default function AboutPreviewSection() {
   return (
-    <section id="a-propos" className="py-24 bg-cream-alt">
-      <div className="max-w-[1200px] mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <ScrollReveal direction="right" delay={0.1} className="order-2 lg:order-1">
-            <div className="relative mx-auto max-w-md">
-              <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-brand/15 to-lavender/20 blur-md" />
-              <img
-                src={SITE_IMAGES.about}
-                alt={SITE_IMAGES.aboutAlt}
-                className="relative rounded-2xl w-full object-cover shadow-hero-frame ring-1 ring-brand/15"
-                loading="lazy"
-              />
-            </div>
+    <section id="a-propos" className="bg-cream-warm py-20 md:py-24">
+      <div className="harmony-container">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <ScrollReveal className="order-2 lg:order-1">
+            <figure>
+              <div className="overflow-hidden rounded-[1.5rem_0.75rem_1.5rem_0.75rem] shadow-hero-frame ring-1 ring-warm-border">
+                <img
+                  src={SITE_IMAGES.portrait}
+                  alt={SITE_IMAGES.portraitAlt}
+                  className="aspect-[4/5] w-full object-cover object-top"
+                  loading="lazy"
+                  width={480}
+                  height={600}
+                />
+              </div>
+            </figure>
           </ScrollReveal>
 
           <ScrollReveal className="order-1 lg:order-2">
             <SectionHeader
-              animated
-              label="À propos"
-              title={`${SITE.practitioner}, praticienne en soins énergétiques`}
+              label="Qui suis-je"
+              title={`${SITE.practitioner}`}
+              subtitle="Praticienne en soins énergétiques — une approche naturelle, humaine et bienveillante."
               align="left"
               className="mb-6"
             />
-            <p className="text-warm-text-secondary leading-relaxed mb-4">
-              J&apos;accompagne humains et animaux depuis plusieurs années, avec passion et
-              humilité. Mon cabinet principal est à Bernissart ; je reçois aussi à Silly et
-              Mons pour les humains.
-            </p>
-            <p className="text-warm-text-secondary leading-relaxed mb-6">
-              Je suis aussi psychologue agréée — deux activités complémentaires, deux sites
-              distincts. Ici, place aux soins énergétiques et au bien-être.
-            </p>
-            <Button href="/a-propos" variant="secondary">
-              Mon parcours
+            <div className="space-y-4 text-warm-text-secondary leading-relaxed">
+              <p>
+                Depuis plusieurs années, j&apos;accompagne humains et animaux vers un
+                mieux-être énergétique. Mon cabinet principal est à Bernissart ; je
+                reçois aussi à Silly et Mons pour les humains.
+              </p>
+              <p>
+                Je suis également psychologue agréée —{" "}
+                <strong className="font-medium text-warm-text">deux activités distinctes</strong>,
+                deux sites. Ici, c&apos;est l&apos;univers Harmonie et Mieux-Être : Reiki,
+                shiatsu, kinésiologie, communication animale…
+              </p>
+            </div>
+            <Button href="/a-propos" variant="outline" className="mt-8 rounded-xl">
+              En savoir plus
             </Button>
           </ScrollReveal>
         </div>
