@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,28 +6,36 @@
 
 @layer base {
   :root {
-    --background: 30 33% 97%;
-    --foreground: 28 22% 14%;
+    --background: 145 45% 98%;
+    --foreground: 155 40% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 28 22% 14%;
+    --card-foreground: 155 40% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 28 22% 14%;
-    --primary: 14 48% 55%;
-    --primary-light: 14 58% 72%;
-    --primary-dark: 18 38% 26%;
+    --popover-foreground: 155 40% 12%;
+    --primary: 258 32% 54%;
+    --primary-light: 258 38% 68%;
+    --primary-dark: 258 38% 32%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 30 28% 93%;
-    --secondary-foreground: 28 22% 14%;
-    --muted: 32 24% 94%;
-    --muted-foreground: 28 12% 40%;
-    --accent: 100 16% 90%;
-    --accent-foreground: 28 22% 14%;
+    --secondary: 138 32% 92%;
+    --secondary-foreground: 155 40% 12%;
+    --muted: 140 28% 94%;
+    --muted-foreground: 150 14% 36%;
+    --accent: 135 38% 94%;
+    --accent-foreground: 155 40% 12%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 30 22% 86%;
-    --input: 30 22% 86%;
-    --ring: 14 48% 55%;
-    --radius: 0.625rem;
+    --border: 138 28% 86%;
+    --input: 138 28% 86%;
+    --ring: 258 32% 54%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 152 55% 40%;
   }
 }
 
@@ -50,17 +58,48 @@
     scroll-behavior: smooth;
   }
   ::selection {
-    @apply bg-peach/60 text-brand-dark;
+    @apply bg-brand/25 text-brand-dark;
   }
 }
 
+/* Grain subtil — atmosphère organique */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
+
 @layer components {
-  .harmony-container {
-    @apply mx-auto max-w-[1140px] px-6;
+  .glass-panel {
+    @apply border border-white/60 bg-white/70 shadow-card backdrop-blur-md;
   }
 
-  .organic-divider {
-    @apply h-px w-full bg-gradient-to-r from-transparent via-warm-border to-transparent;
+  .card-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.35) 45%,
+      transparent 50%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.7s ease;
+    pointer-events: none;
+  }
+  .card-shine:hover::after {
+    transform: translateX(120%);
   }
 
   .btn-shine {
@@ -74,7 +113,7 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.22),
       transparent
     );
     transform: translateX(-100%);
@@ -84,8 +123,21 @@
     transform: translateX(100%);
   }
 
-  .portrait-organic {
-    border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+  .floating-leaf {
+    animation: float-leaf 8s ease-in-out infinite;
+  }
+  .floating-leaf-delayed {
+    animation: float-leaf 11s ease-in-out 2s infinite;
+  }
+}
+
+@keyframes float-leaf {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(6deg);
   }
 }
 
@@ -93,6 +145,14 @@
   html {
     scroll-behavior: auto;
   }
+  body::before {
+    display: none;
+  }
+  .floating-leaf,
+  .floating-leaf-delayed {
+    animation: none;
+  }
+  .card-shine::after,
   .btn-shine::before {
     display: none;
   }

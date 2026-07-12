@@ -103,7 +103,7 @@ export default function MethodPageLayout({
           </div>
 
           <ScrollReveal delay={0.15}>
-            <div className="mt-16 mb-2 rounded-2xl bg-brand-dark p-8 text-center shadow-banner">
+            <div className="mt-16 mb-2 rounded-2xl bg-gradient-to-r from-brand-dark via-brand to-lavender p-8 text-center shadow-banner">
               <p className="font-display text-xl text-white mb-2">
                 Envie d&apos;en savoir plus ?
               </p>
@@ -119,7 +119,7 @@ export default function MethodPageLayout({
                 <Button
                   variant="secondary"
                   href="/premiere-seance"
-                  className="rounded-xl border border-white/30 bg-white/10 px-5 py-3 text-xs text-white hover:bg-white/20 sm:px-8 sm:py-3.5 sm:text-sm"
+                  className="px-5 py-3 text-xs sm:px-8 sm:py-3.5 sm:text-sm border-white/40 text-white hover:bg-white/10"
                 >
                   Première séance
                 </Button>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 
-type ButtonVariant = "primary" | "secondary" | "outline";
+type ButtonVariant = "primary" | "secondary" | "lavender";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
@@ -14,11 +14,11 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-brand text-white hover:bg-brand-light hover:shadow-cta active:bg-brand-dark",
+    "bg-brand text-white hover:bg-brand-light hover:-translate-y-0.5 hover:shadow-cta active:bg-brand-dark active:translate-y-0",
   secondary:
-    "bg-cream-warm text-brand-dark ring-1 ring-warm-border hover:bg-peach-light hover:ring-brand/30",
-  outline:
-    "bg-transparent text-brand ring-2 ring-brand/40 hover:bg-brand hover:text-white hover:ring-brand",
+    "bg-white/80 border-2 border-brand/30 text-brand backdrop-blur-sm hover:bg-brand hover:text-white hover:border-brand active:bg-brand-dark",
+  lavender:
+    "bg-transparent border-2 border-lavender text-lavender hover:bg-lavender hover:text-white active:bg-lavender-light",
 };
 
 export default function Button({
@@ -31,7 +31,7 @@ export default function Button({
   shine = false,
   ...props
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center px-6 py-3 text-sm font-semibold transition-all duration-200 ${variantClasses[variant]} ${shine ? "btn-shine" : ""} ${className}`;
+  const classes = `inline-flex items-center justify-center px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 ${variantClasses[variant]} ${shine ? "btn-shine" : ""} ${className}`;
 
   if (href?.startsWith("/") && !href.startsWith("//")) {
     return (

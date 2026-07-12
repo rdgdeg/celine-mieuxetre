@@ -12,6 +12,7 @@ export default function BlogPreviewSection() {
       <div className="max-w-[1200px] mx-auto px-6">
         <ScrollReveal blur={false} scale={1}>
           <SectionHeader
+            animated
             label="Blog"
             title="À lire pour avancer"
             subtitle="Soins énergétiques, animaux, Fleurs de Bach et hygiène énergétique."

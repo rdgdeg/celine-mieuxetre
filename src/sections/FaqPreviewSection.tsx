@@ -11,6 +11,7 @@ export default function FaqPreviewSection() {
       <div className="max-w-[1200px] mx-auto px-6">
         <ScrollReveal blur={false} scale={1}>
           <SectionHeader
+            animated
             label="Questions fréquentes"
             title="Vous vous posez peut-être ces questions"
           />

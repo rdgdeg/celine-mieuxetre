@@ -50,6 +50,7 @@ export default function ContactSection({ standalone = false }: ContactSectionPro
           <div className="flex min-h-0 flex-col lg:h-full">
             <ScrollReveal>
               <SectionHeader
+                animated
                 label="Me contacter"
                 title="Prenons contact"
                 subtitle="Tarifs sur demande — je vous réponds sous 48 h en général."

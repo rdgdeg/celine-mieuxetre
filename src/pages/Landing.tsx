@@ -2,6 +2,7 @@ import { useLayoutEffect } from "react";
 import { useLocation } from "react-router";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SiteLayout from "@/layouts/SiteLayout";
+import SectionWave from "@/components/SectionWave";
 import HeroSection from "@/sections/HeroSection";
 import PillarsSection from "@/sections/PillarsSection";
 import MethodsPreviewSection from "@/sections/MethodsPreviewSection";
@@ -33,12 +34,15 @@ export default function Landing() {
   return (
     <SiteLayout scrollTop={false}>
       <HeroSection />
-      <div className="organic-divider" aria-hidden />
+      <SectionWave fill="fill-cream-alt" />
       <PillarsSection />
+      <SectionWave fill="fill-cream" flip />
       <MethodsPreviewSection />
       <ApproachSection />
+      <SectionWave fill="fill-cream-alt" flip />
       <AboutPreviewSection />
       <BlogPreviewSection />
+      <SectionWave fill="fill-cream" />
       <FaqPreviewSection />
       <ContactSection />
     </SiteLayout>
