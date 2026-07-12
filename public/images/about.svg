@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Nature apaisante">
+  <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e8e4f4"/><stop offset="50%" stop-color="#c4b8e0"/><stop offset="100%" stop-color="#8fbcb4"/></linearGradient></defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <circle cx="200" cy="450" r="80" fill="#7c6baa" opacity="0.3"/>
+  <circle cx="600" cy="200" r="120" fill="#a898d4" opacity="0.25"/>
+  <path d="M0 420 Q200 380 400 420 T800 400 L800 600 L0 600 Z" fill="#4a3d6b" opacity="0.15"/>
+  <text x="400" y="300" text-anchor="middle" fill="#4a3d6b" font-family="Georgia,serif" font-size="28" opacity="0.6">Harmonie et Mieux-Être</text>
+</svg>

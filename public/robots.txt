@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Allow: /mentions-legales
+Allow: /politique-confidentialite
+
+Sitemap: https://www.harmonie-et-mieux-etre.be/sitemap.xml
