@@ -55,6 +55,8 @@ export default function MethodPage() {
         title: s.title,
         content: renderSectionContent(s),
       }))}
+      image={method.image}
+      imageAlt={method.imageAlt}
     />
   );
 }

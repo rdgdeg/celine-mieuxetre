@@ -18,8 +18,8 @@ export default function ReikiPourAnimauxBody() {
 
       <ArticleFigure
         src={blogBodyImage("reiki-pour-animaux")}
-        alt="Chien détendu — séance Reiki pour animaux"
-        caption="Détente, sommeil, changement de posture : des signes que l'énergie circule."
+        alt="Reiki — pierre gravée, cristaux et bougie pour les soins énergétiques"
+        caption="Une énergie douce et apaisante, transmise à distance à votre compagnon."
       />
 
       <h2 className="mt-10 font-display text-xl font-semibold text-ink md:text-2xl">

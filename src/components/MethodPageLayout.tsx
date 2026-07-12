@@ -17,6 +17,8 @@ interface MethodPageLayoutProps {
   intro: React.ReactNode;
   sections: MethodSection[];
   breadcrumbLabel?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 export default function MethodPageLayout({
@@ -25,6 +27,8 @@ export default function MethodPageLayout({
   intro,
   sections,
   breadcrumbLabel,
+  image,
+  imageAlt,
 }: MethodPageLayoutProps) {
   const headerRef = useRef<HTMLElement>(null);
 
@@ -72,6 +76,21 @@ export default function MethodPageLayout({
               <span className="text-warm-text">{breadcrumbLabel ?? title}</span>
             </nav>
           </ScrollReveal>
+
+          {image && (
+            <ScrollReveal blur={false} scale={1} distance={16}>
+              <figure className="mb-10 overflow-hidden rounded-2xl shadow-card ring-1 ring-warm-border/60">
+                <img
+                  src={image}
+                  alt={imageAlt ?? title}
+                  className="aspect-[3/2] w-full object-cover"
+                  loading="eager"
+                  width={960}
+                  height={640}
+                />
+              </figure>
+            </ScrollReveal>
+          )}
 
           <header ref={headerRef} className="mb-12">
             <h1 className="font-display text-3xl font-bold text-ink md:text-4xl lg:text-[2.75rem] leading-tight opacity-0">

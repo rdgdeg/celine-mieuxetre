@@ -19,8 +19,8 @@ export default function FleursDeBachAnimauxBody() {
 
       <ArticleFigure
         src={blogBodyImage("fleurs-de-bach-animaux")}
-        alt="Fleurs et compagnon animal — Fleurs de Bach pour animaux"
-        caption="Un flacon sur mesure, adapté à l'état émotionnel de votre compagnon."
+        alt="Flacons Fleurs de Bach et fleurs sauvages — équilibre émotionnel pour animaux"
+        caption="Les élixirs floraux accompagnent le bien-être émotionnel de votre compagnon."
       />
 
       <h2 className="mt-10 font-display text-xl font-semibold text-ink md:text-2xl">

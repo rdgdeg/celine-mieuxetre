@@ -13,6 +13,8 @@ export type Method = {
   forHumans?: boolean;
   forAnimals?: boolean;
   distancePreferred?: boolean;
+  image?: string;
+  imageAlt?: string;
 };
 
 export const METHODS: Method[] = [
@@ -20,6 +22,9 @@ export const METHODS: Method[] = [
     slug: "reiki",
     title: "Reiki",
     subtitle: "L'énergie universelle au service de votre bien-être",
+    image: "/images/reiki.jpg",
+    imageAlt:
+      "Reiki — pierre gravée, cristaux améthyste et quartz rose, bougie et ambiance de soin énergétique",
     intro: [
       "Le Reiki est une technique japonaise de canalisation de l'énergie universelle. Je pose mes mains sur ou au-dessus de votre corps — ou de celui de votre animal — pour favoriser la détente, l'apaisement et l'harmonisation énergétique.",
       "C'est une approche douce, non invasive, qui complète un suivi médical ou vétérinaire sans jamais le remplacer.",
@@ -277,6 +282,9 @@ export const METHODS: Method[] = [
     slug: "fleurs-de-bach",
     title: "Fleurs de Bach",
     subtitle: "Rééquilibrer vos émotions naturellement",
+    image: "/images/fleurs-de-bach.jpg",
+    imageAlt:
+      "Fleurs de Bach — flacons d'élixirs floraux pour l'équilibre émotionnel",
     intro: [
       "Les Fleurs de Bach sont 38 élixirs floraux développés par le Dr Edward Bach au XXe siècle. Chaque fleur correspond à un état émotionnel : peur, incertitude, solitude, épuisement…",
       "Je vous aide à composer un mélange personnalisé, en cabinet ou à distance, en m'appuyant sur l'écoute et parfois sur la kinésiologie.",
