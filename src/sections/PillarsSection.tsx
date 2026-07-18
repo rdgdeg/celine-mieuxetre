@@ -7,7 +7,7 @@ const pillars = [
     icon: User,
     title: "Humains",
     description:
-      "Reiki, Lahochi, shiatsu, kinésiologie, Fleurs de Bach… En cabinet à Bernissart, Silly ou Mons.",
+      "Reiki, Lahochi, shiatsu, kinésiologie, walking therapy, Fleurs de Bach… En cabinet ou en forêt.",
   },
   {
     icon: PawPrint,

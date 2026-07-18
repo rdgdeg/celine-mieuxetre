@@ -9,6 +9,7 @@ import {
   PawPrint,
   Flower2,
   HandHeart,
+  Trees,
   ArrowUpRight,
   type LucideIcon,
 } from "lucide-react";
@@ -28,6 +29,7 @@ const ICONS: Record<string, LucideIcon> = {
   PawPrint,
   Flower2,
   HandHeart,
+  Trees,
 };
 
 export default function ServicesIndex() {
@@ -43,8 +45,8 @@ export default function ServicesIndex() {
             <SectionHeader
               animated
               label="Mes méthodes"
-              title="9 approches pour votre harmonie"
-              subtitle="Humains et animaux — en cabinet ou à distance. Tarifs sur demande."
+              title="10 approches pour votre harmonie"
+              subtitle="Humains et animaux — en cabinet, en nature ou à distance. Tarifs indiqués sur chaque page."
               className="mb-14"
             />
           </ScrollReveal>

@@ -4,6 +4,12 @@ export type MethodSection = {
   list?: string[];
 };
 
+export type MethodPricing = {
+  amount: number;
+  duration: string;
+  note?: string;
+};
+
 export type Method = {
   slug: string;
   title: string;
@@ -15,7 +21,12 @@ export type Method = {
   distancePreferred?: boolean;
   image?: string;
   imageAlt?: string;
+  pricing?: MethodPricing;
 };
+
+export function formatMethodPrice(pricing: MethodPricing): string {
+  return `${pricing.amount}\u00a0€ · ${pricing.duration}`;
+}
 
 export const METHODS: Method[] = [
   {
@@ -32,6 +43,7 @@ export const METHODS: Method[] = [
     forHumans: true,
     forAnimals: true,
     distancePreferred: true,
+    pricing: { amount: 70, duration: "1 h" },
     sections: [
       {
         title: "Comment ça se passe ?",
@@ -70,6 +82,7 @@ export const METHODS: Method[] = [
     forHumans: true,
     forAnimals: true,
     distancePreferred: true,
+    pricing: { amount: 70, duration: "1 h" },
     sections: [
       {
         title: "Les principes du Lahochi",
@@ -91,8 +104,7 @@ export const METHODS: Method[] = [
       {
         title: "En pratique",
         paragraphs: [
-          "Une séance dure généralement entre 45 et 60 minutes. Vous n'avez rien à faire : juste vous laisser porter.",
-          "Tarifs sur demande — contactez-moi pour en discuter.",
+          "Une séance dure généralement environ une heure. Vous n'avez rien à faire : juste vous laisser porter.",
         ],
       },
     ],
@@ -108,6 +120,7 @@ export const METHODS: Method[] = [
     forHumans: true,
     forAnimals: true,
     distancePreferred: true,
+    pricing: { amount: 70, duration: "1 h" },
     sections: [
       {
         title: "En quoi diffère-t-il du Lahochi ?",
@@ -143,12 +156,13 @@ export const METHODS: Method[] = [
     ],
     forHumans: true,
     forAnimals: false,
+    pricing: { amount: 65, duration: "1 h" },
     sections: [
       {
         title: "Déroulement d'une séance",
         paragraphs: [
           "Vous êtes habillé confortablement (idéalement en coton souple). Je travaille sur un futon ou une table, en adaptant les pressions à votre sensibilité.",
-          "Une séance dure environ 60 minutes. Il est préférable de ne pas manger lourd juste avant.",
+          "Une séance dure environ une heure. Il est préférable de ne pas manger lourd juste avant.",
         ],
       },
       {
@@ -180,6 +194,7 @@ export const METHODS: Method[] = [
     forHumans: true,
     forAnimals: true,
     distancePreferred: true,
+    pricing: { amount: 70, duration: "1 h" },
     sections: [
       {
         title: "Comment fonctionne le test musculaire ?",
@@ -352,6 +367,54 @@ export const METHODS: Method[] = [
         title: "En séance",
         paragraphs: [
           "Je vous guide pas à pas, en adaptant les formulations à votre situation. L'objectif est de réduire l'intensité émotionnelle pour retrouver plus de sérénité — et de vous donner les clés pour continuer seul.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "walking-therapy",
+    title: "Walking therapy",
+    subtitle: "Séances en nature, au rythme de la marche",
+    intro: [
+      "La walking therapy, ce sont des séances en extérieur — souvent en forêt — où l'on marche et l'on parle à un rythme doux. Moins demandées parfois, elles font pourtant beaucoup de bien : l'air, le silence, le mouvement aident à déposer ce qui pèse.",
+      "Vous pouvez venir seul·e, ou avec votre animal (chien le plus souvent ; d'autres compagnons sont possibles au cas par cas, si le cadre le permet).",
+    ],
+    forHumans: true,
+    forAnimals: true,
+    pricing: {
+      amount: 65,
+      duration: "45 min",
+      note: "Même tarif qu'une séance classique, en extérieur.",
+    },
+    sections: [
+      {
+        title: "Pourquoi en forêt ?",
+        paragraphs: [
+          "J'aime beaucoup accompagner en bois : on croise rarement quelqu'un, l'isolement sonore est réel, et le cadre invite naturellement à ralentir.",
+          "Ce n'est pas une randonnée sportive. On avance à votre rythme, en laissant de la place à ce qui vient.",
+        ],
+      },
+      {
+        title: "Avec votre animal",
+        paragraphs: [
+          "Beaucoup de personnes apprécient de marcher avec leur chien. Certaines évoquent même leur chat ou un autre compagnon — on en discute ensemble pour voir si c'est adapté et sécurisant.",
+          "L'animal fait partie de la séance : sa présence peut apaiser, ancrer, et ouvrir d'autres portes de dialogue.",
+        ],
+      },
+      {
+        title: "Pour qui ?",
+        list: [
+          "Envie de bouger plutôt que de rester assis en cabinet",
+          "Stress, rumination, besoin d'air et de nature",
+          "Personnes qui se sentent mieux en marchant pour parler",
+          "Accompagnement avec son animal de compagnie",
+        ],
+      },
+      {
+        title: "Organisation pratique",
+        paragraphs: [
+          "Le lieu et le parcours se précisent lors de la prise de rendez-vous (accès, météo, niveau de marche). Prévoir des chaussures adaptées et une tenue confortable.",
+          "En cas de mauvais temps, on peut reporter ou proposer une séance en cabinet.",
         ],
       },
     ],

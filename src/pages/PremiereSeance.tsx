@@ -13,12 +13,12 @@ const steps = [
   {
     title: "2. Échange et orientation",
     content:
-      "Nous clarifions ensemble la méthode la plus adaptée : Reiki, Lahochi, communication animale, Fleurs de Bach… Je vous explique comment se déroule la séance.",
+      "Nous clarifions ensemble la méthode la plus adaptée : Reiki, Lahochi, walking therapy, communication animale, Fleurs de Bach… Je vous explique comment se déroule la séance.",
   },
   {
     title: "3. La séance",
     content:
-      "Durée : 45 à 75 minutes selon la méthode. Pour les humains : en cabinet ou à distance. Pour les animaux : principalement à distance, avec une photo et quelques infos.",
+      "Durée : 45 à 75 minutes selon la méthode. Pour les humains : en cabinet, en nature (walking therapy) ou à distance. Pour les animaux : principalement à distance, avec une photo et quelques infos — ou en walking avec vous.",
   },
   {
     title: "4. Après la séance",

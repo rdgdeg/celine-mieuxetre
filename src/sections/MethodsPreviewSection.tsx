@@ -9,6 +9,7 @@ import {
   PawPrint,
   Flower2,
   HandHeart,
+  Trees,
   ArrowUpRight,
   type LucideIcon,
 } from "lucide-react";
@@ -27,6 +28,7 @@ const ICONS: Record<string, LucideIcon> = {
   PawPrint,
   Flower2,
   HandHeart,
+  Trees,
 };
 
 export default function MethodsPreviewSection() {
@@ -44,7 +46,7 @@ export default function MethodsPreviewSection() {
             animated
             label="Mes méthodes"
             title="9 approches pour votre harmonie"
-            subtitle="Tarifs sur demande — contactez-moi pour en discuter."
+            subtitle="En cabinet, en nature ou à distance — tarifs sur chaque page méthode."
           />
         </ScrollReveal>
 
@@ -81,7 +83,7 @@ export default function MethodsPreviewSection() {
               to="/methodes"
               className="inline-flex items-center gap-2 text-brand font-semibold hover:underline"
             >
-              Voir les 9 méthodes
+              Voir les 10 méthodes
               <ArrowUpRight size={16} />
             </Link>
           </p>

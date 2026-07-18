@@ -87,7 +87,7 @@ export default function BlogArticleLayout({ meta, children }: BlogArticleLayoutP
             </p>
             <p className="mt-2 text-sm text-warm-text-secondary">
               Je reçois à Bernissart, Silly et Mons pour les humains, et à distance pour
-              les animaux. Tarifs sur demande — contactez-moi pour en discuter.
+              les animaux. Les tarifs sont indiqués sur chaque page méthode.
             </p>
             <div className="mt-6 flex flex-nowrap items-center gap-3">
               <Link

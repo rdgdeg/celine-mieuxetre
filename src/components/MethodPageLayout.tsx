@@ -5,6 +5,7 @@ import Button from "@/components/Button";
 import ScrollReveal from "@/components/ScrollReveal";
 import { gsap } from "@/lib/gsap";
 import { SITE } from "@/data/site";
+import { formatMethodPrice, type MethodPricing } from "@/data/methods";
 
 export type MethodSection = {
   title: string;
@@ -19,6 +20,7 @@ interface MethodPageLayoutProps {
   breadcrumbLabel?: string;
   image?: string;
   imageAlt?: string;
+  pricing?: MethodPricing;
 }
 
 export default function MethodPageLayout({
@@ -29,6 +31,7 @@ export default function MethodPageLayout({
   breadcrumbLabel,
   image,
   imageAlt,
+  pricing,
 }: MethodPageLayoutProps) {
   const headerRef = useRef<HTMLElement>(null);
 
@@ -54,6 +57,8 @@ export default function MethodPageLayout({
     }, el);
     return () => ctx.revert();
   }, [title, subtitle]);
+
+  const ctaPricing = pricing ? formatMethodPrice(pricing) : SITE.pricingNote;
 
   return (
     <SiteLayout className="min-h-screen bg-cream pb-28 lg:pb-24">
@@ -101,6 +106,14 @@ export default function MethodPageLayout({
                 {subtitle}
               </p>
             )}
+            {pricing && (
+              <p className="mt-5 inline-flex items-baseline gap-2 rounded-full border border-brand/20 bg-brand/8 px-4 py-2 text-sm font-medium text-brand opacity-0">
+                <span className="font-display text-lg text-ink">
+                  {pricing.amount}&nbsp;€
+                </span>
+                <span className="text-warm-text-secondary">· {pricing.duration}</span>
+              </p>
+            )}
             <div className="mt-6 text-base leading-relaxed text-warm-text-secondary space-y-4 opacity-0">
               {intro}
             </div>
@@ -126,7 +139,7 @@ export default function MethodPageLayout({
               <p className="font-display text-xl text-white mb-2">
                 Envie d&apos;en savoir plus ?
               </p>
-              <p className="text-sm text-white/80 mb-6">{SITE.pricingNote}</p>
+              <p className="text-sm text-white/80 mb-6">{ctaPricing}</p>
               <div className="flex flex-nowrap justify-center items-center gap-3">
                 <Button
                   href="/contact"

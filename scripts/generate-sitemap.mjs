@@ -25,6 +25,7 @@ const entries = [
   { path: "/methodes/communication-animale", lastmod: "2026-07-12", changefreq: "monthly", priority: "0.85" },
   { path: "/methodes/fleurs-de-bach", lastmod: "2026-07-12", changefreq: "monthly", priority: "0.85" },
   { path: "/methodes/eft", lastmod: "2026-07-12", changefreq: "monthly", priority: "0.85" },
+  { path: "/methodes/walking-therapy", lastmod: "2026-07-19", changefreq: "monthly", priority: "0.85" },
   { path: "/blog", lastmod: "2026-07-12", changefreq: "weekly", priority: "0.75" },
   { path: "/blog/fleurs-de-bach-animaux", lastmod: "2026-06-10", changefreq: "monthly", priority: "0.65" },
   { path: "/blog/soins-energetiques-distance-animaux", lastmod: "2026-05-28", changefreq: "monthly", priority: "0.65" },

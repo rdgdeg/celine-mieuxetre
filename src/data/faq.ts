@@ -22,7 +22,12 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Comment se déroule une première séance ?",
     answer:
-      "Nous commençons par un échange : votre situation, vos attentes, vos questions. Ensuite, je vous propose la méthode la plus adaptée. La séance dure généralement entre 45 et 75 minutes selon la technique. Tarifs sur demande — contactez-moi pour en discuter.",
+      "Nous commençons par un échange : votre situation, vos attentes, vos questions. Ensuite, je vous propose la méthode la plus adaptée. La séance dure généralement entre 45 et 75 minutes selon la technique. Les tarifs sont indiqués sur chaque page méthode.",
+  },
+  {
+    question: "Proposez-vous des séances en nature (walking therapy) ?",
+    answer:
+      "Oui. J'aime beaucoup accompagner en forêt : on marche à un rythme doux, souvent dans des bois calmes où l'on croise peu de monde. Vous pouvez venir avec votre animal (chien le plus souvent ; d'autres compagnons au cas par cas). Tarif : 65 € pour 45 minutes — même prix qu'une séance classique.",
   },
   {
     question: "Combien de séances sont nécessaires ?",
@@ -37,7 +42,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Où se déroulent les séances pour les humains ?",
     answer:
-      "En cabinet à Bernissart (2 rue des Iguanodons), Silly ou Mons, sur rendez-vous. Certaines méthodes se pratiquent aussi à distance en visioconférence.",
+      "En cabinet à Bernissart (2 rue des Iguanodons), Silly ou Mons, sur rendez-vous. Aussi en nature pour la walking therapy. Certaines méthodes se pratiquent à distance en visioconférence.",
   },
   {
     question: "Comment prendre rendez-vous ?",
@@ -47,7 +52,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Quels sont vos tarifs ?",
     answer:
-      "Tarifs sur demande. Chaque accompagnement est personnalisé — la durée, la méthode et le format (cabinet ou distance) influencent le prix. Contactez-moi pour un devis adapté à votre situation.",
+      "Les tarifs sont indiqués sur chaque page méthode : soin énergétique 70 € / 1 h, shiatsu 65 € / 1 h, kinésiologie 70 € / 1 h, walking therapy 65 € / 45 min. Pour les autres prestations (communication animale, Fleurs de Bach, EFT…), contactez-moi pour un devis adapté.",
   },
   {
     question: "Proposez-vous aussi de la psychologie ?",

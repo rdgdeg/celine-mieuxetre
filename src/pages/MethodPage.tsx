@@ -57,6 +57,7 @@ export default function MethodPage() {
       }))}
       image={method.image}
       imageAlt={method.imageAlt}
+      pricing={method.pricing}
     />
   );
 }

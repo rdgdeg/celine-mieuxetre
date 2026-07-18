@@ -12,7 +12,7 @@ export const SITE = {
     "https://www.facebook.com/C%C3%A9line-Belin-Psychologue-Coach-de-vie-253918965132820/",
   psyUrl: "https://www.celinebelin-psychologue.be",
   github: "https://github.com/rdgdeg/celine-mieuxetre",
-  pricingNote: "Tarifs sur demande",
+  pricingNote: "Tarifs indiqués sur chaque méthode — sinon sur demande",
 } as const;
 
 export const SEO_AREAS = [
@@ -70,6 +70,7 @@ export const LOCATIONS: Location[] = [
 
 export const CONSULTATION_MODES = [
   "En cabinet (humains)",
+  "En nature (walking therapy)",
   "À distance (animaux privilégié)",
   "Visioconférence",
 ] as const;
@@ -81,6 +82,7 @@ export const HERO_TAGS = [
   "Lahochi",
   "Shiatsu",
   "Kinésiologie",
+  "Walking therapy",
   "Communication animale",
   "Fleurs de Bach",
 ] as const;
@@ -146,6 +148,13 @@ export const METHODS_PREVIEW: MethodPreview[] = [
     description: "Libération émotionnelle par tapotements sur les méridiens.",
     href: "/methodes/eft",
     icon: "HandHeart",
+  },
+  {
+    title: "Walking therapy",
+    description:
+      "Séances en forêt, au rythme de la marche — avec ou sans votre animal.",
+    href: "/methodes/walking-therapy",
+    icon: "Trees",
   },
 ];
 

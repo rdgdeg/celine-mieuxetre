@@ -53,7 +53,7 @@ export default function ContactSection({ standalone = false }: ContactSectionPro
                 animated
                 label="Me contacter"
                 title="Prenons contact"
-                subtitle="Tarifs sur demande — je vous réponds sous 48 h en général."
+                subtitle="Je vous réponds sous 48 h en général. Les tarifs sont sur chaque page méthode."
                 align="left"
                 className="mb-8 lg:mb-10"
               />

@@ -1,6 +1,6 @@
 import { SITE } from "@/data/site";
 import { SITE_IMAGES } from "@/data/images";
-import { METHODS } from "@/data/methods";
+import { formatMethodPrice, METHODS } from "@/data/methods";
 import { FAQ_ITEMS } from "@/data/faq";
 import {
   absoluteUrl,
@@ -13,32 +13,37 @@ const base = "Praticienne en soins énergétiques";
 
 export const HOME_SEO: PageSeoConfig = {
   title: `${SITE.name} — Soins énergétiques & bien-être | Céline Belin`,
-  description: `Soins énergétiques pour humains et animaux par Céline Belin : Reiki, Lahochi, shiatsu, kinésiologie, communication animale, Fleurs de Bach. Bernissart, Silly, Mons et à distance.`,
+  description: `Soins énergétiques pour humains et animaux par Céline Belin : Reiki, Lahochi, shiatsu, kinésiologie, walking therapy, communication animale, Fleurs de Bach. Bernissart, Silly, Mons et à distance.`,
   path: "/",
   image: `${SITE.domain}${SITE_IMAGES.hero}`,
 };
 
 const methodSeoEntries = Object.fromEntries(
-  METHODS.map((m) => [
-    `/methodes/${m.slug}`,
-    {
-      title: `${m.title} — ${base} | ${SITE.name}`,
-      description: `${m.subtitle}. ${m.intro[0]} Soins à Bernissart, Silly, Mons et à distance. Tarifs sur demande.`,
-      path: `/methodes/${m.slug}`,
-      jsonLd: buildBreadcrumbJsonLd([
-        { name: "Accueil", path: "/" },
-        { name: "Méthodes", path: "/methodes" },
-        { name: m.title, path: `/methodes/${m.slug}` },
-      ]),
-    } satisfies PageSeoConfig,
-  ])
+  METHODS.map((m) => {
+    const priceBit = m.pricing
+      ? ` Tarif : ${formatMethodPrice(m.pricing)}.`
+      : " Tarifs sur demande.";
+    return [
+      `/methodes/${m.slug}`,
+      {
+        title: `${m.title} — ${base} | ${SITE.name}`,
+        description: `${m.subtitle}. ${m.intro[0]} Soins à Bernissart, Silly, Mons et à distance.${priceBit}`,
+        path: `/methodes/${m.slug}`,
+        jsonLd: buildBreadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Méthodes", path: "/methodes" },
+          { name: m.title, path: `/methodes/${m.slug}` },
+        ]),
+      } satisfies PageSeoConfig,
+    ];
+  })
 );
 
 export const STATIC_PAGE_SEO: Record<string, PageSeoConfig> = {
   ...methodSeoEntries,
   "/methodes": {
     title: `Méthodes de soins énergétiques — ${SITE.name}`,
-    description: `Découvrez mes 9 méthodes : Reiki, Lahochi, shiatsu, kinésiologie, communication animale, Fleurs de Bach, EFT. Humains et animaux, à distance ou en cabinet.`,
+    description: `Découvrez mes 10 méthodes : Reiki, Lahochi, shiatsu, kinésiologie, walking therapy, communication animale, Fleurs de Bach, EFT. Humains et animaux, en cabinet, en nature ou à distance.`,
     path: "/methodes",
     jsonLd: buildBreadcrumbJsonLd([
       { name: "Accueil", path: "/" },
@@ -56,7 +61,7 @@ export const STATIC_PAGE_SEO: Record<string, PageSeoConfig> = {
   },
   "/premiere-seance": {
     title: `Première séance — ${SITE.name}`,
-    description: `Comment se déroule une première séance de soins énergétiques ? Échange, méthode adaptée, durée. Tarifs sur demande — Céline Belin.`,
+    description: `Comment se déroule une première séance de soins énergétiques ? Échange, méthode adaptée, durée. Tarifs indiqués sur chaque page méthode — Céline Belin.`,
     path: "/premiere-seance",
     jsonLd: buildBreadcrumbJsonLd([
       { name: "Accueil", path: "/" },
@@ -167,6 +172,7 @@ export const LOCAL_BUSINESS_JSON_LD = {
         "Lahochi",
         "Shiatsu",
         "Kinésiologie",
+        "Walking therapy",
         "Communication animale",
         "Fleurs de Bach",
         "EFT",
